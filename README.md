@@ -30,9 +30,16 @@ Antes de proceder a instalar asegurarse de tener la ultima version de [nodeJS](h
 Para ejecutar nos colocamos en la carpeta raíz del proyecto y escribimos el siguiente comando para abrir Playwright:
 
 ```bash
-  pnpm run
+  npx playwright show-report
 ```
 Esto abrira la interfaz grafica para poder visualizar los casos de prueba.
+
+Si deseas ejecutar las pruebas con la interfaz de usuario para observarlas en tiempo real, puedes utilizar:
+
+```bash
+  npx playwright test --ui
+```
+
     
 ## Herramientas Utilizadas
 
