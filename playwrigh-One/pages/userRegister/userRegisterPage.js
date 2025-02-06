@@ -1,9 +1,10 @@
 import { selectors } from "playwright-core";
+import { expect } from "playwright/test";
 
 export class HomePage {
     constructor (page){
         this.page = page 
-        this.loginButton = 'g[clip-path="url(#clip0_440_247)"]';
+        this.loginButton = page.locator('g[clip-path="url(#clip0_440_247)"]');
     }
 
     async goToHome() {
@@ -11,6 +12,7 @@ export class HomePage {
     }
 
     async clickLogin() {
-        await this.page.click(this.loginButton)
+        await expect(this.loginButton.first()).toBeVisible({timeout:5000});
+        await this.loginButton.first().click();
     }
 }
