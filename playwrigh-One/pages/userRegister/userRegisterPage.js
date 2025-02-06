@@ -7,7 +7,7 @@ export class HomePage {
     }
 
     async goToHome() {
-        await this.page.goto("https://demo.spreecommerce.org");
+        await this.page.goto("/");
     }
 
     async clickLogin() {
